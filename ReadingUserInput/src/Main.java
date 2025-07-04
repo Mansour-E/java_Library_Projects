@@ -48,9 +48,9 @@ public class Main {
         }while(!validdob);
 
         String year = scanner.nextLine();
-        int age = currentYear - Integer.parseInt(year);
+        int age1 = currentYear - Integer.parseInt(year);
 
-        System.out.println("So you are " + age + " years old. ");
+        System.out.println("So you are " + age1 + " years old. ");
 
         return "";
     }
