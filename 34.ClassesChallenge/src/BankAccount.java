@@ -6,6 +6,10 @@ public class BankAccount {
     private String email;
     private int phoneNumber;
 
+    public BankAccount() {
+        this(12345,0.00,"Default Name","Default address",0);
+        System.out.println("Bank Account Created");
+    }
     public BankAccount(int accountNumber, double accountBalance, String customerName, String email, int phoneNumber) {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
@@ -14,6 +18,9 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
 
     }
+
+
+
     public int getAccountNumber(){
         return accountNumber;
     }
