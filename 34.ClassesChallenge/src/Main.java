@@ -3,7 +3,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        BankAccount account = new BankAccount();
+        BankAccount account = new BankAccount(1234 , 500 , "hasan",
+                "mansuurem@gmail.com",1748445659);
+
         account.setCustomerName("hasan");
         account.setEmail("mansuurem@gmail.com");
         account.setAccountNumber(1234);
