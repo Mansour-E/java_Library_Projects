@@ -24,12 +24,16 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="300Mt0d6vuYJMIT7UmCXp1cI0eJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -64,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752760249043</updated>
-      <workItem from="1752760250136" duration="1864000" />
+      <workItem from="1752760250136" duration="1905000" />
     </task>
     <task id="LOCAL-00001" summary="Printer">
       <option name="closed" value="true" />
@@ -74,13 +78,30 @@
       <option name="project" value="LOCAL" />
       <updated>1752762045834</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Printer">
+      <option name="closed" value="true" />
+      <created>1752762134761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752762134761</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Printer">
+      <option name="closed" value="true" />
+      <created>1752762138730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752762138730</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Printer" />
     <option name="LAST_COMMIT_MESSAGE" value="Printer" />
   </component>
