@@ -1,0 +1,29 @@
+package dev.lpa;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[] myIntArray = new int[10];
+        myIntArray[0] = (int)45.0;
+        myIntArray[1] =  Integer.parseInt("1");
+        myIntArray[5] = 50;
+
+        double[] myDoubleArray = new double[10];
+        myDoubleArray[2] = 3.5;
+
+        int[] firstFivePositives = new int[]{ 1, 2, 3, 4, 5};
+
+        int[] firstFourPositives = {1, 2, 3, 4}; // anonymous array
+        String[] names = {"Andy", "Bob", "Charlie", "David", "Eve" }; // anonymous array
+
+        int[] firstTen = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("first = " + firstTen[0]);
+        int arrayLength = firstTen.length;
+        System.out.println("length of array = " + arrayLength);
+        System.out.println("last = " + firstTen[firstTen.length - 1]);
+
+        int[] newArray;
+        newArray = new int[]{5, 4, 3, 2, 1};
+    }
+}

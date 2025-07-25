@@ -31,7 +31,7 @@ public class Item{
         return price;
     }
 
-    public double getAdjustedPreice(){
+    public double getAdjustedPrice(){
         return switch(size){
             case "SMALL" -> getBasePrice() - 0.5;
             case "LARGE" -> getBasePrice() + 1;
@@ -42,7 +42,7 @@ public class Item{
         System.out.printf("%20s:%6.2f%n" , name , price);
     }
     public void printItem(){
-        printItem(getName() , getAdjustedPreice());
+        printItem(getName() , getAdjustedPrice());
     }
 
 
