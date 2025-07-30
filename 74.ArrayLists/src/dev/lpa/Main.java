@@ -8,6 +8,11 @@ record GroceryItem(String name , String type, int count){
     public GroceryItem(String name ){
         this(name , "DAIRY" , 1);
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d %s in %s", count, name.toUpperCase(), type);
+    }
 }
 
 public class Main{
@@ -37,6 +42,13 @@ public class Main{
         ArrayList<GroceryItem> groceryList = new ArrayList<GroceryItem>();
         groceryList.add(new GroceryItem("Butter"));
         //groceryList.add("yogurt"); geht nicht mehr weil die type ist GroceryItem
+        groceryList.add(new GroceryItem("milk"));
+        groceryList.add(new GroceryItem("oranges","PRODUCE" , 5));
+        groceryList.add(0, new GroceryItem("apples" , "PRODUCE" , 6));
+
+        System.out.println(groceryList);
+
+
 
     }
 }
