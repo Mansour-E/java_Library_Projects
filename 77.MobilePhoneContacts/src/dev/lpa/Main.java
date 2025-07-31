@@ -18,6 +18,7 @@ public class Main {
 
         MobilePhone mobilePhone = new MobilePhone("017484456599" );
 
+
         mobilePhone.printContacts();
         if(mobilePhone.addNewContact(new Contact("Hadi" , "09173068284"))){
             contacts.add(contact3);
@@ -31,8 +32,7 @@ public class Main {
         mobilePhone.removeContact(hadi2);
         mobilePhone.printContacts();
 
-        System.out.println(mobilePhone.findContact("Rozi"));
-        mobilePhone.findContact("Rozi");
+
 
         Contact rozi = mobilePhone.queryContact("Rozi");
         ArrayList<Contact> querycontact = new ArrayList<>();

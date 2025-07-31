@@ -1,7 +1,5 @@
 package dev.lpa;
 
-import java.util.ArrayList;
-
 public class Contact {
 
     private String name;
@@ -19,10 +17,11 @@ public class Contact {
     public String getPhoneNumber() {
         return phoneNumber;
     }
-    public static ArrayList<Contact> createContacts(String name , String phoneNumber) {
+    public static Contact createContact(String name , String phoneNumber) {
 
-        ArrayList<Contact> contacts = new ArrayList<>();
-        contacts.add(new Contact(name, phoneNumber));
-        return contacts;
+        Contact contact = new Contact(name , phoneNumber);
+
+        return contact;
+
     }
 }
