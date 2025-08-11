@@ -19,8 +19,13 @@ public class Main {
         animals.add(new Fish("Barracuda", "big", 75));
         animals.add(new Dog("Pug", "small", 20));
 
+        animals.add(new Horse("Clydesdale", "large", 100));
+
         for(Animal animal: animals){
             doAnimalStuff(animal);
+            if (animal instanceof Mammal currentMammal) {
+                currentMammal.shedHair();
+            }
         }
 
 
@@ -31,4 +36,6 @@ public class Main {
         animal.makeNoise();
         animal.move("slow");
     }
+
+
 }
