@@ -12,6 +12,9 @@ public class Store {
         storeProducts.add(new ArtObject("Oil Painting", 1350, "Impressionistic work by ABF painted in 2010"));
         storeProducts.add(new ArtObject("Sculpture", 2000, "Bronze work by JKF, product in 1950"));
 
+        storeProducts.add(new Furniture("Lamp", 200, "Tiffany Lamp with Hummingbirds"));
+        storeProducts.add(new Furniture("Desk", 500, "Mahogany Desk"));
+
         listProduct();
 
         System.out.println("\nOrder 1");
@@ -20,6 +23,12 @@ public class Store {
         addItemToOrder(order1, 0, 1);
         printOrder(order1);
 
+        System.out.println("\nOrder 2");
+        var order2 = new ArrayList<OrderItem>();
+        addItemToOrder(order2, 3,5);
+        addItemToOrder(order2, 0,1);
+        addItemToOrder(order2, 2, 1);
+        printOrder(order2);
 
     }
 
