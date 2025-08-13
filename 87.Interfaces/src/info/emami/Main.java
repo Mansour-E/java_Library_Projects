@@ -20,6 +20,8 @@ public class Main {
 
         inFlight(flier);
         inFlight(new Jet());
+        Trackable truck = new Truck();
+        truck.track();
 
 
     }
