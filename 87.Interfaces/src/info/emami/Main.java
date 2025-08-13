@@ -19,7 +19,7 @@ public class Main {
         flier.land();*/
 
         inFlight(flier);
-
+        inFlight(new Jet());
 
 
     }
