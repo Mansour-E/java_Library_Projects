@@ -1,6 +1,6 @@
 package info.emami;
 
-public class Bird extends Animal implements FlightEnable , Trackable{
+public class Bird extends Animal implements FlightEnabled, Trackable{
 
     @Override
     public void move() {

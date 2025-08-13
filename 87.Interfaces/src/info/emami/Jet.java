@@ -1,6 +1,6 @@
 package info.emami;
 
-public class Jet implements FlightEnable, Trackable{
+public class Jet implements FlightEnabled, Trackable{
 
     @Override
     public void takeoff() {

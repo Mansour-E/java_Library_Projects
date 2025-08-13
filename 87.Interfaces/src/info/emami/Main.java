@@ -6,7 +6,7 @@ public class Main {
 
         Bird bird = new Bird();
         Animal animal = bird;
-        FlightEnable flier = bird;
+        FlightEnabled flier = bird;
         Trackable tracked = bird;
 
         animal.move();
@@ -24,14 +24,14 @@ public class Main {
         truck.track();
 
         double kmsTraveled = 100;
-        double milesTraveled = kmsTraveled * FlightEnable.KM_TO_MILES;
+        double milesTraveled = kmsTraveled * FlightEnabled.KM_TO_MILES;
         System.out.printf("The truck traveled %.2f km or %.2f miles%n", kmsTraveled , milesTraveled);
 
 
 
     }
 
-    private static void inFlight(FlightEnable flier){
+    private static void inFlight(FlightEnabled flier){
 
         flier.takeoff();
         flier.fly();
