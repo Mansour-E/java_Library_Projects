@@ -1,9 +1,9 @@
 package info.emami;
 
-public class Jet implements FlightEnabled, Trackable{
+public class Jet implements FlightEnabled, Trackable {
 
     @Override
-    public void takeoff() {
+    public void takeOff() {
         System.out.println(getClass().getSimpleName() + " is taking off");
     }
 
@@ -24,7 +24,6 @@ public class Jet implements FlightEnabled, Trackable{
 
     @Override
     public FlightStages transition(FlightStages stage) {
-
         System.out.println(getClass().getSimpleName() + " transitioning");
         return FlightEnabled.super.transition(stage);
     }

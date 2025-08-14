@@ -1,6 +1,5 @@
 package info.emami;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,10 +16,10 @@ public class Main {
 //        flier.move();
 //        tracked.move();
 
-/*        flier.takeoff();
-        flier.fly();
-        tracked.track();
-        flier.land();*/
+//        flier.takeOff();
+//        flier.fly();
+//        tracked.track();
+//        flier.land();
 
         inFlight(flier);
         inFlight(new Jet());
@@ -29,12 +28,13 @@ public class Main {
 
         double kmsTraveled = 100;
         double milesTraveled = kmsTraveled * FlightEnabled.KM_TO_MILES;
-        System.out.printf("The truck traveled %.2f km or %.2f miles%n", kmsTraveled , milesTraveled);
+        System.out.printf("The truck traveled %.2f km or %.2f miles%n",
+                kmsTraveled, milesTraveled);
 
         LinkedList<FlightEnabled> fliers = new LinkedList<>();
         fliers.add(bird);
 
-        List<FlightEnabled> betterFliers = new ArrayList<>();// in argument du sollst nur list benutzen um alles zum kommplieren nicht anderen
+        List<FlightEnabled> betterFliers = new LinkedList<>();
         betterFliers.add(bird);
 
         triggerFliers(fliers);
@@ -44,15 +44,11 @@ public class Main {
         triggerFliers(betterFliers);
         flyFliers(betterFliers);
         landFliers(betterFliers);
-
-
-
-
     }
 
-    private static void inFlight(FlightEnabled flier){
+    private static void inFlight(FlightEnabled flier) {
 
-        flier.takeoff();
+        flier.takeOff();
         flier.fly();
         if (flier instanceof Trackable tracked) {
             tracked.track();
@@ -60,26 +56,24 @@ public class Main {
         flier.land();
     }
 
-    private static void triggerFliers(List<FlightEnabled> fliers){
+    private static void triggerFliers(List<FlightEnabled> fliers) {
 
         for (var flier : fliers) {
-            flier.takeoff();
+            flier.takeOff();
         }
     }
 
-    private static void flyFliers(List<FlightEnabled> fliers){
+    private static void flyFliers(List<FlightEnabled> fliers) {
 
         for (var flier : fliers) {
             flier.fly();
         }
     }
 
-    private static void landFliers(List<FlightEnabled> fliers){
+    private static void landFliers(List<FlightEnabled> fliers) {
 
         for (var flier : fliers) {
             flier.land();
         }
     }
-
-
 }
