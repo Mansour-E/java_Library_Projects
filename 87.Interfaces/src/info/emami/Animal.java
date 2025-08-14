@@ -69,6 +69,11 @@ interface FlightEnabled {
     abstract void land(); // redundant the reason is oben
     void fly();
 
+    default FlightStages transition(FlightStages stage){
+        System.out.println("transition not implememnted on " + this.getClass().getName());
+        return null;
+    }
+
 }
 
 interface Trackable{
