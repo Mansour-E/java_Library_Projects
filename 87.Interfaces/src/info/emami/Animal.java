@@ -104,6 +104,7 @@ interface FlightEnabled {
     void land();
     void fly();
 
+
     default FlightStages transition(FlightStages stage) {
 //        System.out.println("transition not implemented on " + getClass().getName());
 //        return null;

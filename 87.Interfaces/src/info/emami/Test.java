@@ -4,11 +4,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        inFlight(new Jet());
+        inFlight(new info.emami.Jet());
 
 //        OrbitEarth.log("Testing " + new Satellite());
 
-        orbit(new Satellite());
+        orbit(new info.emami.Satellite());
     }
 
     private static void inFlight(info.emami.FlightEnabled flier) {

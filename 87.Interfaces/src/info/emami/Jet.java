@@ -7,6 +7,7 @@ public class Jet implements FlightEnabled, Trackable {
         System.out.println(getClass().getSimpleName() + " is taking off");
     }
 
+
     @Override
     public void land() {
         System.out.println(getClass().getSimpleName() + " is landing");

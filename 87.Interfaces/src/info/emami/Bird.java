@@ -7,6 +7,7 @@ public class Bird extends Animal implements FlightEnabled, Trackable {
         System.out.println("Flaps wings");
     }
 
+
     @Override
     public void takeOff() {
         System.out.println(getClass().getSimpleName() + " is taking off");
