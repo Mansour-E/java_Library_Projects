@@ -95,5 +95,10 @@ public class SearchTree implements NodeList{
     @Override
     public void traverse(ListItem root) {
 
+        if (root != null) {
+            traverse(root.previous()); // to the left of root
+            System.out.println(root.getValue());
+            traverse(root.next()); // to the right of root
+        }
     }
 }
