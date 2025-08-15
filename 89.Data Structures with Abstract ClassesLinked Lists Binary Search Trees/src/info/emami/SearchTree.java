@@ -26,11 +26,37 @@ public class SearchTree implements NodeList{
         while (currentItem != null) {
 
             int comparison = currentItem.compareTo(item);
-            if (comparison < 0) {// newItem is greater, move right if possible
+            if (comparison < 0) {// item is greater, move right if possible
 
+                if (currentItem.next() != null) {
 
+                    currentItem = currentItem.next();
+
+                }else{
+
+                    currentItem.setNext(item);
+                    return true;
+
+                }
+            } else if (comparison > 0) { // item is less, move left if possible
+
+                if(currentItem.previous() != null){
+
+                    currentItem = currentItem.previous();
+                }else{// there's no node to the left, so add at this
+
+                    currentItem.setPrevious(item);
+                    return true;
+                }
+
+            }else{// equal, so don't add
+
+                System.out.println(item.getValue() + " is already present");
+                return false;
             }
         }
+
+        return false;
     }
 
     @Override
