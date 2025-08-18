@@ -13,7 +13,7 @@ public abstract class Point implements Mappable{
 
     @Override
     public void render() {
-
+        System.out.println("Render " + this + " as POINT (" + location() + ")");
     }
 
 
