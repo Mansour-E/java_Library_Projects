@@ -1,18 +1,26 @@
 package info.emami;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Layer <T extends Mappable>{
 
-    private List<T> layerElement;
+    private List<T> layerElements;
 
-    public Layer(List<T> layerElement) {
-        this.layerElement = layerElement;
+    public Layer(T[] layerElement) {
+        this.layerElements = new ArrayList<T>(List.of(layerElement));
     }
 
-    public void renderLayer(List<T> mapped){
+    public void addElement(T... elemenst){
 
+        layerElements.addAll(List.of(elemenst));
     }
 
-    public void addElement()
+    public void renderLayer(){
+
+        for ( T element : layerElements){
+            element.render();
+        }
+    }
+
 }
