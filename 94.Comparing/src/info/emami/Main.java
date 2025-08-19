@@ -27,9 +27,38 @@ public class Main {
         Arrays.sort(fruit);
         System.out.println(Arrays.toString(fruit));
 
+        System.out.println("A:"+(int)'A' + " " + "a:"+(int)'a');
+        System.out.println("B:" + (int)'B' + " " + "p:"+(int)'p');
+
+        Student tim = new Student("Tim");
+        Student[] students = {new Student("Zach"), new Student("Tim"), new Student("Ann")};
+
+        Arrays.sort(students);
+        System.out.println(Arrays.toString(students));
+
 
 
     }
 
 
+}
+
+class Student implements Comparable{
+
+    private String name;
+
+    public Student(String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Student other = (Student) o;
+        return name.compareTo(other.name);
+    }
 }
