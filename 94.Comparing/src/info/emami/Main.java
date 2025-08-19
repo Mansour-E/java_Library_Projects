@@ -1,6 +1,8 @@
 package info.emami;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Random;
 
 public class Main {
 
@@ -28,13 +30,22 @@ public class Main {
         System.out.println(Arrays.toString(fruit));
 
         System.out.println("A:"+(int)'A' + " " + "a:"+(int)'a');
-        System.out.println("B:" + (int)'B' + " " + "p:"+(int)'p');
+        System.out.println("B:" + (int)'B' + " " + "b:"+(int)'b');
+        System.out.println("P:" + (int)'P' + " " + "p:"+(int)'p');
 
         Student tim = new Student("Tim");
         Student[] students = {new Student("Zach"), new Student("Tim"), new Student("Ann")};
 
         Arrays.sort(students);
         System.out.println(Arrays.toString(students));
+
+        System.out.println("result = " + tim.compareTo(new Student("TIM")));
+
+        Comparator<Student> gpaSorter = new StudentGPAComparator();
+        Arrays.sort(students, gpaSorter.reversed());
+        System.out.println(Arrays.toString(students));
+
+
 
 
 
@@ -43,22 +54,43 @@ public class Main {
 
 }
 
-class Student implements Comparable{
+class Student implements Comparable<Student>{
 
-    private String name;
+    private static int LAST_ID = 1000;
+    private static Random random = new Random();
+
+    String name;
+    private int id;
+    protected double gpa;
 
     public Student(String name){
         this.name = name;
+        id = LAST_ID++;
+        gpa = random.nextDouble(1.0, 4.0);
     }
 
     @Override
     public String toString() {
-        return name;
+        return "%d - %s (%.2f)".formatted(id,name,gpa);
     }
 
     @Override
+    public int compareTo(Student o) {
+        return Integer.valueOf(id).compareTo(Integer.valueOf(o.id));
+    }
+
+    /*@Override
     public int compareTo(Object o) {
         Student other = (Student) o;
         return name.compareTo(other.name);
+    }*/
+}
+
+class StudentGPAComparator implements Comparator<Student>{
+
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        return (o1.gpa + o1.name).compareTo(o2.gpa + o2.name);
     }
 }
