@@ -1,7 +1,7 @@
 package info.emami;
 
-public class Node extends ListItem{
-
+// Node
+public class Node extends ListItem {
 
     public Node(Object value) {
         super(value);
@@ -9,13 +9,13 @@ public class Node extends ListItem{
 
     @Override
     ListItem next() {
-       return this.rightLink;
+        return this.rightLink;
     }
 
     @Override
     ListItem setNext(ListItem item) {
         this.rightLink = item;
-        return rightLink;
+        return this.rightLink;
     }
 
     @Override
@@ -26,17 +26,16 @@ public class Node extends ListItem{
     @Override
     ListItem setPrevious(ListItem item) {
         this.leftLink = item;
-        return leftLink;
+        return this.leftLink;
     }
 
     @Override
     int compareTo(ListItem item) {
+
         if (item != null) {
             return ((String) super.getValue()).compareTo((String) item.getValue());
-        }else{
+        } else {
             return -1;
         }
     }
-
-
 }

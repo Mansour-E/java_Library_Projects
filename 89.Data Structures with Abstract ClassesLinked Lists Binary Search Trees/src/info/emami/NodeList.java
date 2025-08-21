@@ -1,5 +1,6 @@
 package info.emami;
 
+// NodeList
 public interface NodeList {
 
     ListItem getRoot();
