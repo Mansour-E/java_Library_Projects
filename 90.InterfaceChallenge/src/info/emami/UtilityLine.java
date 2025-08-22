@@ -1,6 +1,6 @@
 package info.emami;
 
-enum UtilityType {ELECTRICAL, FIBER_OPTIC}
+enum UtilityType {ELECTRICAL, FIBER_OPTIC, GAS, WATER}
 
 public class UtilityLine implements Mappable{
 
@@ -10,16 +10,28 @@ public class UtilityLine implements Mappable{
 
     @Override
     public String getLabel() {
-        return "";
+        return name + "(" + type + ")";
     }
 
     @Override
     public Geometry getShape() {
-        return null;
+        return Geometry.LINE;
     }
 
     @Override
     public String getMarker() {
-        return "";
+        return switch(type){
+            case ELECTRICAL  -> Color.RED + " " + LineMarkers.DASHED;
+            case FIBER_OPTIC -> Color.GREEN + " " + LineMarkers.DOTTED;
+            case GAS         -> Color.ORANGE + " " + LineMarkers.SOLID;
+            case WATER       -> Color.BLUE + " " + LineMarkers.SOLID;
+            default          ->Color.BLACK + " " + LineMarkers.SOLID;
+        };
+    }
+
+    @Override
+    public String toJSON() {
+        return Mappable.super.toJSON() + """
+                , "name": "%s", "usage": "%s" """.formatted(name, type);
     }
 }
