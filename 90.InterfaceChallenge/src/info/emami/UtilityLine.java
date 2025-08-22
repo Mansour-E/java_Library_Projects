@@ -7,6 +7,10 @@ public class UtilityLine implements Mappable{
     private String name;
     private UtilityType type;
 
+    public UtilityLine(String name, UtilityType type) {
+        this.name = name;
+        this.type = type;
+    }
 
     @Override
     public String getLabel() {
