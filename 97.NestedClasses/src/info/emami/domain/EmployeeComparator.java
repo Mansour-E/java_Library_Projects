@@ -1,4 +1,4 @@
-package dev.lpa.domain;
+package info.emami.domain;
 
 import java.util.Comparator;
 

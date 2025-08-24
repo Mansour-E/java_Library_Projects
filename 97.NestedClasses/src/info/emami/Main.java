@@ -1,6 +1,6 @@
-package dev.lpa;
+package info.emami;
 
-import dev.lpa.domain.Employee;
+import info.emami.domain.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
