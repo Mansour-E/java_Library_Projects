@@ -1,6 +1,5 @@
 package info.emami.domain;
 
-
 import java.util.Comparator;
 
 public class StoreEmployee extends Employee {
@@ -37,3 +36,4 @@ public class StoreEmployee extends Employee {
     }
 
 }
+
