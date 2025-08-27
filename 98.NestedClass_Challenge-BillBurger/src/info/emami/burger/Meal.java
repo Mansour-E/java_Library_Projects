@@ -37,6 +37,10 @@ public class Meal {
 
     }
 
+    public void addToppings(String... selectedToppings){
+        burger.addToppings(selectedToppings);
+    }
+
     public class Item{
 
         private String name;
@@ -65,16 +69,54 @@ public class Meal {
 
     public class Burger extends Item{
 
-        private List<Meal.Item> toppings = new ArrayList<Meal.Item>();
+        private enum Extra {AVOCADO, BACON, CHEESE, KETCHUP, MAYO, MUSTARD, PICKLES;
+
+            private double getPrice(){
+                return switch (this){
+                    case AVOCADO -> 1.0;
+                    case BACON, CHEESE -> 1.5;
+                    default -> 0;
+                };
+            }
+        }
+
+        private List<Item> toppings = new ArrayList<>();
 
         Burger(String name){
             super(name, "burger", 5.0);
         }
 
         public double getPrice(){
-            return super.price;
+            double total = super.price;
+            for(Item topping: toppings){
+                total += topping.price;
+            }
+            return total;
         }
 
+        private void addToppings(String... selectedToppings){
+
+            for(String item: selectedToppings){
+                try {
+                    Extra topping = Extra.valueOf(item.toUpperCase());
+                    toppings.add(new Item(topping.name(), "Topping", topping.getPrice()));
+                }catch (IllegalArgumentException e){
+                    System.out.println("Topping does not existed");
+                }
+            }
+        }
+
+        @Override
+        public String toString(){
+
+            StringBuilder itemized = new StringBuilder(super.toString());
+            for (Item topping: toppings){
+                itemized.append("\n");
+                itemized.append(topping);
+            }
+
+            return itemized.toString();
+        }
 
 
     }
