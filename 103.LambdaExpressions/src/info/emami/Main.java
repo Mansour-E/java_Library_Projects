@@ -1,7 +1,9 @@
 package info.emami;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.BinaryOperator;
 
 public class Main {
 
@@ -35,8 +37,14 @@ public class Main {
                 "Ralph", "Kramden"
         );
 
+        var result4 = calculator2((var a , var b) -> a + b , 5,3);
 
-
+        var coords = Arrays.asList(
+                new double[]{47.2160, -95.2348},
+                new double[]{29.1566, -89.2495},
+                new double[]{35.1556, -90.0659}
+        );
+        coords.forEach(s -> System.out.println(Arrays.toString(s)));
 
     }
 
@@ -47,6 +55,15 @@ public class Main {
         return result;
 
     }
+
+    public static <T> T calculator2(BinaryOperator<T> function, T value1, T value2){
+
+        T result = function.apply(value1, value2);
+        System.out.println("Result of operation: " + result);
+        return result;
+    }
+
+
 
 
 }
