@@ -47,6 +47,22 @@ public class Main {
         );
         coords.forEach(s -> System.out.println(Arrays.toString(s)));
 
+        BiConsumer<Double, Double> p1 = (lat, lang) -> System.out.printf("[lat:%.3f lon:%.3f]%n", lat, lang);
+
+        var firstPoint = coords.get(0);
+        processPoint(firstPoint[0], firstPoint[1], p1);
+
+        System.out.println("------------");
+        coords.forEach(s -> processPoint(s[0], s[1], p1));
+        coords.forEach(s -> processPoint(s[0], s[1], (lat, lang) -> System.out.printf("[lat:%.3f lon:%.3f]%n", lat, lang)));
+
+        list.removeIf(s -> s.equalsIgnoreCase("bravo"));
+        list.forEach(s -> System.out.println(s));
+
+        System.out.println("------------");
+        list.removeIf(s -> s.startsWith("ea"));
+        list.forEach(s -> System.out.println(s));
+
 
     }
 
