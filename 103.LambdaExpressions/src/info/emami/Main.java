@@ -3,6 +3,7 @@ package info.emami;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 
 public class Main {
@@ -46,6 +47,7 @@ public class Main {
         );
         coords.forEach(s -> System.out.println(Arrays.toString(s)));
 
+
     }
 
     public static <T> T calculator(Operation<T> function, T value1, T value2){
@@ -64,6 +66,9 @@ public class Main {
     }
 
 
+    public static <T> void processPoint(T t1, T t2, BiConsumer<T,T> consumer){
+        consumer.accept(t1,t2);
+    }
 
 
 }
