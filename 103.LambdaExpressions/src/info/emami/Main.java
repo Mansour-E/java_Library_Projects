@@ -3,8 +3,10 @@ package info.emami;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -85,10 +87,10 @@ public class Main {
         });
         System.out.println(Arrays.toString(emptyString));
 
+        String[] names = {"Ann" , "Bob", "Carol", "David", "Ed", "Fred"};
+        String[] randomList = randomlySelectedValues(15, names, () -> new Random().nextInt(0, names.length));
 
-
-
-
+        System.out.println(Arrays.toString(randomList));
 
 
 
@@ -115,6 +117,17 @@ public class Main {
         consumer.accept(t1,t2);
     }
 
+    public static String[] randomlySelectedValues(int count,
+                                                  String[] values,
+                                                  Supplier<Integer> s ){
+
+        String[] selectedValues = new String[count];
+        for(int i = 0; i < count; i++){
+            selectedValues[i] = values[s.get()];
+        }
+
+        return selectedValues;
+    }
 
 }
 
