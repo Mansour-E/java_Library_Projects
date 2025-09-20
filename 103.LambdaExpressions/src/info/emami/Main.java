@@ -63,6 +63,10 @@ public class Main {
         list.removeIf(s -> s.startsWith("ea"));
         list.forEach(s -> System.out.println(s));
 
+        list.replaceAll(s -> s.charAt(0) + "-");
+
+
+
 
     }
 
