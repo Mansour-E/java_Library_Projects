@@ -60,6 +60,8 @@ public class Main {
             return returnVal.toString();
         };
 
+        System.out.println(everySecondChar.apply("123456890"));
+
     }
 
     public static String everySecondChar(String source){
