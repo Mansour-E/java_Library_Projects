@@ -3,6 +3,7 @@ package info.emami;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class Main {
@@ -62,6 +63,24 @@ public class Main {
 
         System.out.println(everySecondChar.apply("123456890"));
 
+        System.out.println(everySecondCharacter( source -> {
+            StringBuilder returnVal = new StringBuilder();
+            for (int i = 0; i < source.length(); i++) {
+                if (i % 2 == 1) {
+                    returnVal.append(source.charAt(i));
+                }
+            }
+
+            return returnVal.toString();
+        } , "123456890"));
+
+        //supply lambda
+        Supplier<String> iLoveJava = () -> " I love Java!";
+        Supplier<String> i_LoveJava = () -> {return "I Love Java!";};
+
+        System.out.println(iLoveJava.get());
+        System.out.println(i_LoveJava.get());
+
     }
 
     public static String everySecondChar(String source){
@@ -76,5 +95,9 @@ public class Main {
         return returnVal.toString();
     }
 
+    public static String everySecondCharacter(Function<String, String> func , String source){
+
+        return func.apply(source);
+    }
 
 }
