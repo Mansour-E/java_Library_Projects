@@ -10,6 +10,9 @@ public class Main {
         String[] names = new String[]{"Anna", "Tomas", "Bob", "jack" , "Yannic"};
         ArrayList<String> namess = new ArrayList<>(List.of("Anna", "Tomas", "Bob", "jack" , "Yannic"));
 
+        namess.replaceAll(s -> s.toUpperCase());
+        namess.forEach(s -> System.out.println(s));
 
+        namess.replaceAll(s -> )
     }
 }
