@@ -21,13 +21,26 @@ public class Main {
 
         //rap to List
         List<String> backedByArray = Arrays.asList(names);
+        backedByArray.replaceAll(s -> s += " " + getRandomChar('A', 'D') + ".");
+        System.out.println(Arrays.toString(names));
+
+        backedByArray.replaceAll(s -> s+= " " + getReversedName(s.split(" ")[0]));
+        Arrays.asList(names).forEach(s -> System.out.println(s));
+
+        List<String> newList = new ArrayList<>(List.of(names));
+        /*newList.removeIf(s -> s.substring(0, s.indexOf(" ")).equals(s.substring(s.lastIndexOf(" ")+1)));
+       */
+
+        //multi line lamda expression. the easy one
+        newList.removeIf(s -> {
+            String first = s.substring(0, s.indexOf(" "));
+            String last = s.substring(s.indexOf(" "));
+            return first.equals(last);
+        });
+        System.out.println("-->Remove names where first = last");
+        newList.forEach(s -> System.out.println(s));
 
 
-        //List
-        namess.replaceAll(s -> s.toUpperCase());
-        namess.forEach(s -> System.out.println(s));
-
-        namess.replaceAll(s -> )
     }
 
     public static char getRandomChar(char startChar, char endChar){
