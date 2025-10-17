@@ -66,12 +66,19 @@ public class Main {
                 new Person("Mickey", "Mouse")
         ));
 
+        System.out.println("-".repeat(30));
         list.sort((o1, o2) -> o1.lastName.compareTo(o2.lastName));
         list.forEach(System.out::println);
 
         System.out.println("-".repeat(30));
         list.sort(Comparator.comparing(Person::lastName));
         list.forEach(System.out::println);
+
+        System.out.println("-".repeat(30));
+        list.sort(Comparator.comparing(Person::lastName).thenComparing(Person::firstName));
+        list.forEach(System.out::println);
+
+        
 
     }
 }
