@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/workspace.xml
+.idea/shelf/
+**/.idea/workspace.xml
+**/.idea/shelf/
+
+# Build output
+out/
+**/out/
+*.class

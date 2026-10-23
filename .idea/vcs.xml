@@ -2,14 +2,13 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01.HelloWorld" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/04.KeyWordsAndExpressions" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/36.Person" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/41.DistanceCalculation" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/42.Wall" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/43.CarpetCostCalculator" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/44.ComplexNumberOperations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/45.Inheritance" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/HelloWorld" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/KeyWordsAndExpressions" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/RecordProject" vcs="Git" />
   </component>
 </project>
