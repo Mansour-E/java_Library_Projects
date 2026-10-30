@@ -23,7 +23,7 @@ public class Main {
         list.removeIf(s -> s.charAt(0) == 'G');
         System.out.println(list);
         System.out.println("gray is in the list?" + list.contains("Gray"));
-        
+
 
     }
 }
