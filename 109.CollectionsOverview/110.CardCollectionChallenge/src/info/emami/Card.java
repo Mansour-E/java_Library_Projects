@@ -1,6 +1,7 @@
 package info.emami;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public record Card(Suit suit, String face, int rank) {
@@ -11,6 +12,10 @@ public record Card(Suit suit, String face, int rank) {
         public char getimage(){
             return (new char[]{9827,9830, 9829,9824})[this.ordinal()];
         }
+    }
+
+    public static Comparator<Card> sortRankReverseSuit(){
+        return Comparator.comparing(Card::rank).reversed().thenComparing(Card::suit);
     }
 
     public static Card getNumericCard(Suit suit, int cardnumber){
@@ -63,6 +68,7 @@ public record Card(Suit suit, String face, int rank) {
         }
 
     }
+
 
     @Override
     public String toString() {
