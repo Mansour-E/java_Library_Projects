@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UT.03.JunitChallenge.iml" filepath="$PROJECT_DIR$/UT.03.JunitChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SetsAndMaps.iml" filepath="$PROJECT_DIR$/SetsAndMaps.iml" />
     </modules>
   </component>
 </project>
